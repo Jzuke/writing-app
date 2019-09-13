@@ -1,0 +1,467 @@
+/* Base */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #333333;
+  color:white;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  }
+
+button {
+	cursor:pointer;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+h1, h3 {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+#prompt {
+  text-align:center;
+}
+
+.prompt--sticky{
+  position:fixed;
+  z-index:1001;
+  bottom:0;
+  width:100%;
+  text-align:center;
+}
+
+#stored-prompt {
+  margin:20px 0 0 0;
+  text-align:center;
+}
+
+#stored-entry {
+  line-height:3rem;
+  margin-bottom:30px;
+}
+
+/* Container */
+
+.header__container {
+  /*max-width: 60rem;*/
+  /*margin: 0 auto;*/
+  padding: 0 1.6rem;
+}
+
+
+/* Header */
+
+.header {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 1.6rem 0;
+}
+
+.header__title {
+  font-size: 3.2rem;
+  margin-bottom: .4rem;
+}
+
+/* Positioning */
+
+.container {
+  display:flex;
+	align-items:center;
+	justify-content: center;
+	/*max-width:60rem;*/
+	margin:50px auto;
+	min-height: 3rem;
+	padding: 0;
+}
+
+.entry-list__container { 
+	width:30%;
+  height:500px;
+  padding:20px;
+	overflow:auto;
+  border-right: white 1px solid;
+ }
+
+.writing-section__container {
+  width:30%;
+  height:500px;
+  padding:0 20px 0 20px;
+}
+
+.writing-section {
+	width:50%;
+}
+
+.countdown-clock {
+ position:absolute;
+ z-index:10000;
+ font-size:2em;
+ top:0;
+ right:0;
+}
+
+ #entry-input {
+ 	color:white;
+ 	background-color:#222;
+  font-size:1.25em;
+ 	border:none;
+  font-family: "Inconsolata", Helvetica, Arial, sans-serif;
+  position:fixed;
+  padding:10%;
+ 	height:100vh;
+ 	outline:none;
+ 	resize:none;
+  text-align: justify;
+  text-align-last: center;
+ 	width:100%;
+ 	white-space: normal;
+  z-index:1000;
+  -moz-text-align-last: center;
+ }
+
+ /* Button */
+
+.btn__add-prompt {
+  border-radius:50%;
+  display:block;
+  font-size:25px;
+  text-align: center;
+  margin:0;
+  padding:0;
+  height:50px;
+  width:50px;
+ }
+
+ .btn {
+  background: #000;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: .8rem;
+  transition: background .3s ease;
+}
+
+.btn--tertiary {
+  background:none;
+  border:none;
+  color:white;
+}
+
+.btn--about {
+  font-size:1.5em;
+  background:none;
+  border:none;
+  color:white;
+}
+
+.btn--about:hover{
+  text-decoration:underline;
+}
+
+/* Entries */
+
+.entry-list__items{
+  border-bottom:1px grey solid;
+  margin: 1.6rem 0;
+  padding: 1rem 1.6rem;
+  cursor:pointer;
+  display:block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.entry-list__items:hover{
+  background-color:#222;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.filter-entries {
+  padding-bottom:20px;
+}
+
+/* Switch */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.generate-buttons{
+  text-align:center;
+  padding:0 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.prompt-selector {
+  text-align:center;
+  padding-bottom:15px;
+  border-bottom:1px solid white;
+  display: flex;
+  justify-content:center;
+  align-items: center
+}
+
+.fullscreen-toggle {
+  text-align:center;
+  padding-bottom:15px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+#generate-prompt {
+  margin-right:5px;
+}
+
+#start-timer {
+  margin-left:5px;
+}
+
+/* Inputs */
+
+/*.dropdown {
+  border-radius: 0;
+  border: 1px solid #DEDFE0;
+  background: #444;
+  color:white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  height: 3rem;
+  margin-right: .8rem;
+}*/
+
+.dropdown {
+  font-size: 1.4rem;
+  color: #fff;
+  padding: .6em 1.6em .6em .8em;
+  box-sizing: border-box;
+  border: 1px solid #DEDFE0;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #444;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+.dropdown::-ms-expand {
+  display: none;
+}
+.dropdown:hover {
+  border-color: #888;
+}
+.dropdown:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  outline: none;
+}
+.dropdown option {
+  font-weight:normal;
+}
+
+.input {
+  background:#222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color:white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  height: 3rem;
+  margin-right: .8rem;
+  padding: .4rem .8rem;
+}
+
+/* The slider */
+
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 62px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #707070;
+  transition: background-color ease 0.3s;
+}
+
+.toggle:before {
+  content: "on off";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  font: 10px/28px Helvetica;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: -22px;
+  word-spacing: 37px;
+  color: #fff;
+  text-shadow: -1px -1px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+.toggle:checked {
+  background-color: #4CD964;
+}
+
+.toggle:checked:before {
+  left: 32px;
+}
+
+.timestamp {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: .8rem;
+  transition: background .3s ease;
+}
+
+/* About Modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color:white;
+  background-color: #222;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 50px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+pre {
+  font-family: "Inconsolata", monospace;
+  line-height:1.5em;
+  margin:auto;
+  text-align:left;
+  white-space: pre-wrap;
+  width:75%;
+}
+
+/*Blinking Cursor*/
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #fff;
+  -webkit-animation: 2s blink step-end infinite;
+  -moz-animation: 2s blink step-end infinite;
+  -ms-animation: 2s blink step-end infinite;
+  -o-animation: 2s blink step-end infinite;
+  animation: 2s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
