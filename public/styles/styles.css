@@ -118,6 +118,7 @@ h1, h3 {
  #entry-input {
  	color:white;
  	background-color:#222;
+  line-height:1.25em;
   font-size:1.25em;
  	border:none;
   font-family: "Inconsolata", Helvetica, Arial, sans-serif;
