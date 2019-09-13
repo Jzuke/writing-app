@@ -21,6 +21,8 @@ With that in mind, this exercise is not intended to create a masterpiece, or eve
 
 5) The editor will automatically exit and your stored entry will be visible on the left, if you want to revisit it, click on the entry to have it displayed on the right. 
 
-DISCLAIMER: The entries are stored locally in your browser and there is no guarantee they will be there forever. If you find you wrote something particularly meaningful, I would highly suggest either saving it in a text editor of choice, or jotting it down on some good ole fashioned pen and paper.
+# DISCLAIMER: 
+
+The entries are stored locally in your browser and there is no guarantee they will be there forever. If you find you wrote something particularly meaningful, I would highly suggest either saving it in a text editor of choice, or jotting it down on some good ole fashioned pen and paper.
 
 Otherwise this is an exercise in ephemerality and there need not be too much focus on the substance of content.
