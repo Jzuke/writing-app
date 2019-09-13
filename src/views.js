@@ -55,9 +55,9 @@ const generateEntryListDOM = (entry) => {
 	const timestampEl = document.createElement('span')
 	const createdEl = document.createElement('p')
 	const promptEl = document.querySelector('#prompt')
-	const promptLength = entry.promptLength === '1' ? '90 sec' :
-											 entry.promptLength === '2' ? '5 min' :
-											 '10 min'
+	const promptLength = entry.promptLength === '600' ? '10 min' :
+											 entry.promptLength === '300' ? '5 min' :
+											 '90 sec'
 
 		if(entry.title.length > 0) {
 			entryTextEl.textContent = `${entry.title} ( ${promptLength} )`
