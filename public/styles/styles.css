@@ -364,6 +364,11 @@ h1, h3 {
   transition: background .3s ease;
 }
 
+.error {
+  color:red;
+  text-align:center;
+}
+
 /* About Modal */
 /* The Modal (background) */
 .modal {

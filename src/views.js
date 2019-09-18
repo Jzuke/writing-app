@@ -135,12 +135,18 @@ const generateTimerDOM = () =>  {
 
 const generateTextEditorDOM = () => {
 	const entryBodyEl = document.querySelector('#entry-input')
+	const errorEl = document.querySelector('#prompt-error')
+	const promptButtonEl = document.querySelector('#generate-prompt')
 	const promptEl = document.querySelector('#prompt')
 	const promptStickyEl = document.createElement('h2')
 
+	promptButtonEl.onclick = () => errorEl.textContent = ''
+
 	if(promptEl.textContent === '') {
-		throw new Error('Generate prompt first')
-	} else {
+		errorEl.textContent = 'Generate prompt first'
+		throw new error('Generate prompt first')
+	} else {	
+		errorEl.textContent = ''
 		entryBodyEl.disabled = false
 		entryBodyEl.hidden = false
 		entryBodyEl.select()
