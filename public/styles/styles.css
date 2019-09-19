@@ -489,6 +489,7 @@ pre {
       height:auto;
       width:auto;
       padding: 20px 0;
+      border-right:none;
     }
 
     .filter-entries, #search-text, #filter-by{
@@ -512,4 +513,6 @@ pre {
     #header {
       margin:auto;
     }
+
+    #entry
   }
