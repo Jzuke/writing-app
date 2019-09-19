@@ -81,6 +81,7 @@ h1, h3 {
 
 .container {
   display:flex;
+  flex-direction:row-reverse;
 	align-items:center;
 	justify-content: center;
 	/*max-width:60rem;*/
@@ -475,3 +476,22 @@ pre {
     color: #fff;
   }
 }
+
+@media screen
+  and (max-width: 866px) {
+    .container{
+      flex-direction:column-reverse;
+    }
+    .entry-list__container, .writing-section__container{
+      display:block;
+      height:auto;
+      width:auto;
+      padding: 20px 0;
+    }
+    .fullscreen-toggle {
+      display:none;
+    }
+    .modal-content{
+      width:100%;
+    }
+  }

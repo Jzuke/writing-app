@@ -4,7 +4,10 @@
 		<title>Writing App</title>
 		<link rel="stylesheet" href="styles/styles.css" />
 		<link href="https://fonts.googleapis.com/css?family=Poppins:700|Raleway:300|Inconsolata&display=swap" rel="stylesheet">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<meta name='description' content='Writing App'>
+    <meta name="keywords" content="Writing, App, Practice, Exercise" />
+    <meta name="author" content="Jake Zuke" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92327390-4"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -65,21 +68,6 @@ Otherwise this is an exercise in ephemerality and there need not be too much foc
 	    </header>
 	    
 		<div class="container">
-				<div class="entry-list__container">
-	          <div class="filter-entries">
-	            <input type="text" id="search-text" class="input" placeholder='Filter entries'/>
-	              <select id="filter-by" class="dropdown">
-	              	<option value="byCreated">Sort by recently created</option>
-	                <option value="byPromptLength">Sort by prompt length</option>
-	                <option value="alphabetical">Sort alphabetically</option>
-	           </select>
-	          </div>
-					<h3>Stored Entries:</h3>
-					<div id="entry-list__items">
-					</div>
-					
-				</div>
-
 				<div class="writing-section__container">
 
 					<div class="fullscreen-toggle">
@@ -111,6 +99,21 @@ Otherwise this is an exercise in ephemerality and there need not be too much foc
 						<h3 id="stored-prompt"></h3>
 						<p id='stored-entry'><p>
 					</div>
+				</div>
+
+				<div class="entry-list__container">
+	          <div class="filter-entries">
+	            <input type="text" id="search-text" class="input" placeholder='Filter entries'/>
+	              <select id="filter-by" class="dropdown">
+	              	<option value="byCreated">Sort by recently created</option>
+	                <option value="byPromptLength">Sort by prompt length</option>
+	                <option value="alphabetical">Sort alphabetically</option>
+	           </select>
+	          </div>
+					<h3>Stored Entries:</h3>
+					<div id="entry-list__items">
+					</div>
+					
 				</div>
 
 
