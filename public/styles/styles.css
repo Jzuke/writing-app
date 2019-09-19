@@ -481,17 +481,35 @@ pre {
   and (max-width: 866px) {
     .container{
       flex-direction:column-reverse;
+      width:90%;
     }
+
     .entry-list__container, .writing-section__container{
       display:block;
       height:auto;
       width:auto;
       padding: 20px 0;
     }
+
+    .filter-entries, #search-text, #filter-by{
+      margin:auto;
+      width:200px;
+      margin-bottom:10px;
+    }
+
     .fullscreen-toggle {
       display:none;
     }
+
+    .entry-list__container h3{
+      text-align:center;
+    }
+
     .modal-content{
       width:100%;
+    }
+
+    #header {
+      margin:auto;
     }
   }
