@@ -1,13 +1,8 @@
-import moment from 'moment'
+import { getNoun } from './nouns'
+import { getAdjective } from './adjectives'
 
-const getPrompt = async () => {
-	const response = await fetch(`https://ineedaprompt.com/dictionary/default/prompt?q=noun`)
-	if (response.status === 200) {
-		const data = await response.json()
-		return data.english
-	} else {
-			throw new Error('Unable to get prompt')
-		}
+const getPrompt = () => {
+	return `${getAdjective()} ${getNoun()}`
 }
 
 const getCountdownTimer = (duration, display) => new Promise((resolve, reject)=> {

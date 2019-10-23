@@ -1,9 +1,8 @@
 import "core-js/stable"
 import "regenerator-runtime/runtime"
-import moment from 'moment'
 import { setFilters } from './filters'
-import { renderEntriesList, renderEntry, generatePrompt, generateTextEditorDOM, generateEntryDOM, clearEntryDOM } from './views'
-import { saveEntry, createEntry, getEntries } from './entries'
+import { renderEntriesList, renderEntry, generatePrompt, generateTextEditorDOM, clearEntryDOM } from './views'
+
 
 renderEntriesList()
 

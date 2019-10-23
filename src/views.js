@@ -5,7 +5,6 @@ import { getFilters } from './filters'
 
 const getFullScreen = () =>  {
 	const checkbox = document.querySelector('#fullscreen')
-	const textEditorEl = document.querySelector('#entry-input')
 	if(document.fullscreenEnabled && checkbox.checked){
 		document.body.requestFullscreen()
 		generateTimerDOM()
@@ -20,9 +19,7 @@ const clearFullScreen = () => {
 
 const generatePrompt = () => { 
 	const promptEl = document.querySelector('#prompt')
-	getPrompt().then((result) => {
-		promptEl.textContent = result
-	})
+	promptEl.textContent = getPrompt()
 }
 
 const renderEntry = (entryId) => {
@@ -52,9 +49,7 @@ const generateEntryListDOM = (entry) => {
 	const entryEl = document.createElement('a')
 	const entryTextEl = document.createElement('a')
 	const removeButton = document.createElement('button')
-	const timestampEl = document.createElement('span')
 	const createdEl = document.createElement('p')
-	const promptEl = document.querySelector('#prompt')
 	const promptLength = entry.promptLength === '600' ? '10 min' :
 											 entry.promptLength === '300' ? '5 min' :
 											 '90 sec'
